@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/gray2">
+
+<RelativeLayout
+    android:id="@+id/rl_top"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:background="@color/purple"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/iv_github"
+        android:layout_marginLeft="10dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/github"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_github"
+        android:text="Github Users"
+        android:padding="7dp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:textSize="20dp"/>
+    
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/black_radius"
+        android:layout_centerVertical="true"
+        android:src="@drawable/baseline_settings_24"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"/>
+</RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_top"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp">
+
+        <SearchView
+            android:id="@+id/sv_search"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:closeIcon="@drawable/ic_clear"
+            android:iconifiedByDefault="false"
+            android:layout_centerHorizontal="true"
+            android:queryHint="Search"
+            android:searchHintIcon="@null"
+            android:searchIcon="null"
+            android:background="@drawable/background_putih"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_user"
+            android:layout_centerHorizontal="true"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/sv_search"
+            android:orientation="vertical"
+            >
+
+            <ScrollView
+                android:id="@+id/sc_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/buka"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/userlist" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

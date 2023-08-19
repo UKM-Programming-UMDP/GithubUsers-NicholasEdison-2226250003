@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/foto_profil"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/FnEfLeCXkAAhB0H1"/>
+
+    <LinearLayout
+        android:id="@+id/ll_list1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/foto_profil"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp">
+        
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Park Soo-Young"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jakarta, Indonesia"
+            android:textSize="15dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/arrow_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/arrow_forward"
+        android:layout_centerVertical="true"/>
+
+
+</RelativeLayout>
